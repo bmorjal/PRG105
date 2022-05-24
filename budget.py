@@ -1,0 +1,32 @@
+print('Budgeting calculater')
+print('')
+
+monthly = float(input('What is your total net monthly income?'))
+housing = float(input('How much do you spend on housing each month?'))
+transportation = float(input('How much do you spend on transportation each month?'))
+phone = float(input('How much do you spend on your phone bill each month?'))
+utilities = float(input('How much do you spend on your utilities each month?'))
+clothing = float(input('How much do you spend on clothing each month?'))
+
+print('')
+
+new = float(housing/monthly)
+new2 = float(transportation/monthly)
+new3 = float(phone/monthly)
+new4 = float(utilities/monthly)
+new5 = float(clothing/monthly)
+left = float(housing + transportation + phone + utilities + clothing)
+left2 = float(monthly - left)
+
+percent = format(new, '.2%')
+percent2 = format(new2, '.2%')
+percent3 = format(new3, '.2%')
+percent4 = format(new4, '.2%')
+percent5 = format(new5, '.2%')
+
+print('Housing takes up', percent)
+print('Transportation takes up', percent2)
+print('Phone takes up', percent3)
+print('Utilities takes up', percent4)
+print('Clothing takes up', percent5)
+print('You have', left2 , 'left from your income after paying these monthly expenses')
