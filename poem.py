@@ -1,0 +1,22 @@
+place = input('Enter a place: ')
+number = input('Enter a number: ')
+action = input('Enter a action: ')
+action2 = input('Enter another action: ')
+thing = input('Enter a object: ')
+thing2 = input('Enter another object: ')
+adjective = input('Enter a adjective: ')
+adjective2 = input('Enter another adjective: ')
+
+
+print("A house of cards, by Christana Rossetti")
+print("A " + thing + " of " + thing2)
+print("Is " + adjective + " and " + adjective2 + ";")
+print(action + " the " + thing + ",")
+print("It must " + action)
+
+print(action2 + " the " + "court " + thing2)
+print(number + " by " + number + ";")
+print(action + " it " + action2 + " it,")
+print("Now it's done.")
+print(action + " the " + thing2 + "!")
+print("That's the fun.")
