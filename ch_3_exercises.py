@@ -99,11 +99,13 @@ print("=" * 10, "Section 3.5 multiple conditions", "=" * 10)
 customer_age = int(input("How old is the customer?   "))
 cost = 0
 if customer_age >= 62:
-    print('$9.89')
-if customer_age == 12:
-    print('$12.89')
-if customer_age > 3:
-    print('free')
+    cost = 9.89
+elif customer_age > 11:
+    cost = 12.89
+elif customer_age >= 3:
+    cost = age * .99
+else:
+    cost = 0
 
 # initializing cost, assign the correct price to this variable
 # Complete the code here to determine the correct cost based on age
@@ -136,5 +138,12 @@ print("=" * 10, "Section 3.6 boolean variables", "=" * 10)
 tired = True
 hungry = False
 
+if tired:
+    print('Eyes open')
+else:
+    print('Eyes closed')
 
-
+if hungry:
+    print('Crying')
+else:
+    print('Quiet')
