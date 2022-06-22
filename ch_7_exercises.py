@@ -112,21 +112,15 @@ print("=" * 10, "Section 7.8 two-dimensional lists", "=" * 10)
 # 1) Create a new two dimensional list that has the months of the year
 #     and the days in each month during a non leap year
 #     For example, the first entry should be: January, 31
-
-
-def list4():
-    month = ["January", "March", "April"]
-
-    day = ["28", "29", "30", "31"]
+months_days = [["January", "31"], ["February", "28"], ["March", "31"], ["April", "30"], ["May", "31"],
+               ["June", "30"], ["July", "31"], ["August", "30"], ["September", "30"], ["October", "31"], ["November", "30"],
+               ["December", "31"]]
 
 # 2) Print the contents of the entire list
-    combined = month + day
-    print(combined)
+print(months_days)
 # 3) Print just the values for index 3,0 and 3,1
-
-
-list4()
-
+print(months_days[3][0])
+print(months_days[3][1])
 
 # TODO 7.9 Tuples
 print("=" * 10, "Section 7.9 tuples", "=" * 10)
