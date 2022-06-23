@@ -1,13 +1,22 @@
 def main():
 
-    grade_file = open('grade.txt', 'w')
+    line = []
+    student_grades = []
+    count = int(input("How many students? "))
+    for student in range(0, count):
+        student_name = input("Enter the students name " + str(student + 1) + ": ")
+        grade = input("Enter the final letter grade of the student: ")
+        line.append(student_name)
+        line.append(grade)
+        student_grades.append(line)
+        line = []
+    print(student_grades)
 
-    user_data = int(input('How many students? '))
-    for count in range(1, user_data + 1):
-        name = input('Enter the name of the student: ')
-        grade = input('Enter the grade of the student: ')
-        grade_file.write("'" + name + "'" + ", " + "'" + grade + "'" + "\n")
-    grade_file.close()
+    outfile = open("grade.txt", "w")
+    for line in student_grades:
+        lineout = "'" + line[0] + "', '" + line[1] + "'\n"
+        outfile.writelines(lineout)
+    outfile.close()
 
 
 main()
