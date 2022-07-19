@@ -91,35 +91,55 @@ print("=" * 10, "Section 11.2 polymorphism", "=" * 10)
 
 
 class Mammal:
-    def __init__(self, birth, blood, hair):
-        self.__birth_type = birth
-        self.__blood = blood
-        self.__hair = hair
+    def __init__(self, species):
+        self.__species = species
 
-    def set__birth_type(self, birth):
-        self.__birth_type = birth
+    def show_species(self):
+        print('I am a ', self.__species)
 
-    def set__blood(self, blood):
-        self.__blood = blood
-
-    def set__hair(self, hair):
-        self.__hair = hair
-
-    def get__birth_type(self):
-        return self.__birth_type
-
-    def get__blood(self):
-        return self.__blood
-
-    def get__hair(self):
-        return self.__hair
+    def make_sound(self):
+        print('Grrrr')
 # 2) Create a Mouse class as a sub class of the mammal class following the Dog example
 
 
 class Mouse(Mammal):
-    def __init__(self, birth, blood, hair):
+    def __init__(self):
+        Mammal.__init__(self, 'Mouse')
+
+    def make_sound(self):
+        print('Squeak')
 
 # 3) Create an Sheep class as a sub class of the mammal class following the Cat Example
 
+
+class Sheep(Mammal):
+    def __init__(self):
+        Mammal.__init__(self, 'Sheep')
+
+    def make_sound(self):
+        print('Baaaa')
 # 4) Follow the example in program 11-10 (no need to import, use main2 instead of main
 #    because there is already a main on this page) use the Mouse and Sheep class that you created
+
+
+def main2():
+    mammal = Mammal('regular animal')
+    dog = Mouse()
+    cat = Sheep()
+
+    print('Here are some animals and')
+    print('The sounds they make.')
+    print('-----------------------')
+    show_mammal_info(mammal)
+    print()
+    show_mammal_info(dog)
+    print()
+    show_mammal_info(cat)
+
+
+def show_mammal_info(creature):
+    creature.show_species()
+    creature.make_sound()
+
+
+main2()
